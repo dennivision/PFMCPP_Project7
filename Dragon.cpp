@@ -18,7 +18,7 @@ void Dragon::attack(Character &other)
     }
 }
 
-Dragon::Dragon(const char* str, int hp, int armor): Character(hp,armor,100), name(str) {}
+Dragon::Dragon(const char* str, int hp, int arm): Character(hp,arm,100), name(str) {}
 
 const std::string& Dragon::getName()
 {

@@ -11,7 +11,7 @@ void DragonSlayer::attack(Character& other)
     std::cout << name << " is attacking " << other.getName() << " !!" << std::endl;
     if( auto* dragon = dynamic_cast<Dragon*>(&other) )
     {
-        assert(false);
+        // assert(false);
         //DragonSlayers get a 10x boost when attacking dragons, from their attack item.
         //so they should USE their attack item before attacking the dragon... 
         //note: they should only use the item if the dragon's hitpoints are > 0...
@@ -27,7 +27,7 @@ void DragonSlayer::attack(Character& other)
         
 }
 
-DragonSlayer::DragonSlayer(const char* str, int hp, int armor): Character(hp, armor, 10), name(str) {}
+DragonSlayer::DragonSlayer(const char* str, int hp, int arm): Character(hp, arm, 10), name(str) {}
 
 const std::string& DragonSlayer::getName()
 {
@@ -38,4 +38,3 @@ std::string DragonSlayer::getStats()
 {
     return getCharacterStats(this);
 }
-

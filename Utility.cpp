@@ -31,7 +31,7 @@ std::vector<std::unique_ptr<Item>> makeDefensiveItems(int num)
     return items;
 }
 
-std::string getCharacterStats(Character* ch)
+std::string getCharacterStats(const Character* ch)
 {
     std::string str;
     
@@ -43,7 +43,7 @@ std::string getCharacterStats(Character* ch)
     return str;
 }
 
-void useDefensiveItem(Character* character, Item& item)
+void useDefensiveItem(Character* character, const Item& item)
 {
     //dwarves, paladins, and DragonSlayers get extra boosts from defensive item.
     if( auto* ch = dynamic_cast<Dwarf*>(character) )
@@ -64,7 +64,7 @@ void useDefensiveItem(Character* character, Item& item)
         //dragons don't need defensive items
     }  
 }
-void useHelpfulItem(Character* character, Item* item)
+void useHelpfulItem(Character* character, const Item* item)
 {
     if( auto* ch = dynamic_cast<Dwarf*>(character) )
     {
@@ -83,7 +83,7 @@ void useHelpfulItem(Character* character, Item* item)
         //dragons don't carry helpful items!
     }
 }
-void useAttackItem(Character* character, Item* item)
+void useAttackItem(Character* character, const Item* item)
 {
     if( auto* ch = dynamic_cast<Dwarf*>(character) )
     {
@@ -95,7 +95,7 @@ void useAttackItem(Character* character, Item* item)
     }
     else if( auto* ch = dynamic_cast<DragonSlayer*>(character))
     {
-        assert(false);
+        //assert(false);
         //DragonSlayers get a 10x boost when attacking dragons, from their attack item.
         //so their attack item should boost their attack damage by a factor of 10
         //this means you need to GET the attack damage, multiply it by the item's boost, and BOOST the attackDamage with that multiplied value.  

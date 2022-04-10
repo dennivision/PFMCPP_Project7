@@ -5,8 +5,11 @@
 #include "Dragon.h"
 #include <cassert>
 
+#include "Utility.h"
+
 void DefensiveItem::use(Character* character)
 {
-    assert(false); 
+    assert(true);
+    useDefensiveItem(character, *this);
     //make your defensive item use the appropriate Utility helper functions
 }
