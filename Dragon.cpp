@@ -4,6 +4,8 @@
 
 //Dragon::Dragon
 
+Dragon::Dragon(const char* str, int hp, int arm): Character(hp,arm,80), name(str) {}
+
 void Dragon::attack(Character &other)
 {
     std::cout << name << " is attacking " << other.getName() << "!!!" << std::endl;
@@ -18,7 +20,7 @@ void Dragon::attack(Character &other)
     }
 }
 
-Dragon::Dragon(const char* str, int hp, int arm): Character(hp,arm,100), name(str) {}
+
 
 const std::string& Dragon::getName()
 {

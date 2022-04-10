@@ -3,8 +3,8 @@
 
 struct Dragon : Character
 {
+    Dragon(const char* str, int hp, int arm);    
     void attack(Character& other) override;
-    Dragon(const char* str, int hp, int arm);
     const std::string& getName() override;
     std::string getStats() override;
 private:
