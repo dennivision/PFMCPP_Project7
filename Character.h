@@ -7,6 +7,8 @@
 
 #include "Item.h"
 
+#include "Utility.h"
+
 struct Character
 {
     Character(int hp, int armor_, int attackDamage_ );
@@ -67,9 +69,9 @@ protected:
     int hitPoints, armor;
     int attackDamage;
     bool isDefending = false;
-    void levelUpStats(int& init, int& stat);
+
 private:
     std::unique_ptr<int> initialHitPoints, initialArmorLevel, initialAttackDamage;
-    
+    void levelUpStats(int& init, int& stat);
     void attackInternal(Character& other);
 };

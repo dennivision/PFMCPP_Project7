@@ -5,7 +5,7 @@
 struct Paladin : Character
 {
 public:
-    Paladin(const char* str, int hp, int arm);
+    Paladin(std::string str, int hp, int arm);
     const std::string& getName() override;
     std::string getStats() override;
 private:

@@ -34,7 +34,11 @@ void DragonSlayer::attack(Character& other)
         
 }
 
-DragonSlayer::DragonSlayer(const char* str, int hp, int arm): Character(hp, arm, 10), name(str) {}
+DragonSlayer::DragonSlayer(std::string str, int hp, int arm): Character(hp, arm, 10), name(str)
+{
+    helpfulItems = makeHelpfulItems(2);
+    defensiveItems = makeDefensiveItems(1);
+}
 
 const std::string& DragonSlayer::getName()
 {
