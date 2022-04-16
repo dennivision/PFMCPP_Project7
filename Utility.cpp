@@ -2,7 +2,7 @@
 #include "Dwarf.h"
 #include "Paladin.h"
 #include "DragonSlayer.h"
-#include "Dragon.h"
+
 #include "HelpfulItem.h"
 #include "DefensiveItem.h"
 #include "Character.h"
@@ -78,6 +78,7 @@ void useHelpfulItem(Character* helper, const Item* item)
         dragonSlayer->boostHitPoints(item->getBoost() * 1.25);
     }
 }
+
 void useAttackItem(Character* attacker, const Item* item)
 {
     if( auto* dwarf = dynamic_cast<Dwarf*>(attacker) )
