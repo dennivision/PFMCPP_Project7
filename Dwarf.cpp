@@ -2,10 +2,10 @@
 
 #include "Utility.h"
 
-Dwarf::Dwarf(std::string str, int hp, int arm) : Character(hp, arm, 1), name(str)
+Dwarf::Dwarf(std::string str, int hp, int arm) : Character(hp, arm, 4), name(str)
 {
-    defensiveItems = makeDefensiveItems(2);
-    helpfulItems = makeHelpfulItems(3);
+    defensiveItems = makeDefensiveItems(5);
+    helpfulItems = makeHelpfulItems(2);
 }
 
 const std::string& Dwarf::getName()

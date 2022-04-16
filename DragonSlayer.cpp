@@ -2,9 +2,9 @@
 #include "Dragon.h"
 #include "Utility.h"
 
-DragonSlayer::DragonSlayer(std::string str, int hp, int arm): Character(hp, arm, 10), name(str)
+DragonSlayer::DragonSlayer(std::string str, int hp, int arm): Character(hp, arm, 4), name(str)
 {
-    helpfulItems = makeHelpfulItems(2);
+    helpfulItems = makeHelpfulItems(3);
     defensiveItems = makeDefensiveItems(1);
 }
 

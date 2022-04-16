@@ -4,7 +4,7 @@
 
 //Dragon::Dragon
 
-Dragon::Dragon(std::string str, int hp, int arm): Character(hp,arm,80), name(str) {}
+Dragon::Dragon(std::string str, int hp, int arm): Character(hp, arm, 80), name(str) {}
 
 void Dragon::attack(Character &other)
 {
@@ -19,8 +19,6 @@ void Dragon::attack(Character &other)
         Character::attack(other);
     }
 }
-
-
 
 const std::string& Dragon::getName()
 {

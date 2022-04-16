@@ -45,49 +45,49 @@ std::string getCharacterStats(Character* ch)
     return str;
 }
 
-void useDefensiveItem(Character* defender, const Item& item)
+void useDefensiveItem(Character* defender, Item& item)
 {
     //dwarves, paladins, and DragonSlayers get extra boosts from defensive item.
     if( auto* dwarf = dynamic_cast<Dwarf*>(defender) )
     {
-        dwarf->boostArmor( item.getBoost() * 1.1 );
+        dwarf->boostArmor(static_cast<int>( item.getBoost() * 1.1 ) );
     }
     else if( auto* paladin = dynamic_cast<Paladin*>(defender) )
     {
         //same with paladins
-        paladin->boostArmor( item.getBoost() * 1.3 );
+        paladin->boostArmor(static_cast<int>( item.getBoost() * 1.3 ) );
     }
     else if( auto* dragonSlayer = dynamic_cast<DragonSlayer*>(defender))
     {
-        dragonSlayer->boostArmor( item.getBoost() * 1.5 );
+        dragonSlayer->boostArmor(static_cast<int>( item.getBoost() * 1.5 ) );
     }
 }
 
-void useHelpfulItem(Character* helper, const Item* item)
+void useHelpfulItem(Character* helper, Item* item)
 {
     if( auto* dwarf = dynamic_cast<Dwarf*>(helper) )
     {
-        dwarf->boostHitPoints(item->getBoost() * 2);
+        dwarf->boostHitPoints(static_cast<int>( item->getBoost() * 2 ) );
     }
     else if( auto* paladin = dynamic_cast<Paladin*>(helper) )
     {
-        paladin->boostHitPoints(item->getBoost() * 1.5);
+        paladin->boostHitPoints(static_cast<int>( item->getBoost() * 1.5 ) );
     }
     else if( auto* dragonSlayer = dynamic_cast<DragonSlayer*>(helper))
     {
-        dragonSlayer->boostHitPoints(item->getBoost() * 1.25);
+        dragonSlayer->boostHitPoints( static_cast<int>( item->getBoost() * 1.25) );
     }
 }
 
-void useAttackItem(Character* attacker, const Item* item)
+void useAttackItem(Character* attacker, Item* item)
 {
     if( auto* dwarf = dynamic_cast<Dwarf*>(attacker) )
     {
-        dwarf->boostAttackDamage(item->getBoost() * 1.5);
+        dwarf->boostAttackDamage(static_cast<int>( item->getBoost() * 1.5 ) );
     }
     else if( auto* paladin = dynamic_cast<Paladin*>(attacker) )
     {
-        paladin->boostAttackDamage(item->getBoost() * 1.33);
+        paladin->boostAttackDamage(static_cast<int>( item->getBoost() * 1.33 ) );
     }
     else if( auto* dragonSlayer = dynamic_cast<DragonSlayer*>(attacker))
     {

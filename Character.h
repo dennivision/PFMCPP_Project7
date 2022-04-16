@@ -7,8 +7,6 @@
 
 #include "Item.h"
 
-#include "Utility.h"
-
 struct Character
 {
     Character(int hp, int armor_, int attackDamage_ );
