@@ -6,5 +6,3 @@ void AttackItem::use(Character* character)
 {
 	useAttackItem(character, this);
 }
-
-AttackItem::~AttackItem() {}

@@ -64,6 +64,7 @@ void useDefensiveItem(Character* defender, const Item& item)
         dragonSlayer->boostArmor( item.getBoost() * 1.5 );
     }
 }
+
 void useHelpfulItem(Character* helper, const Item* item)
 {
     if( auto* dwarf = dynamic_cast<Dwarf*>(helper) )
