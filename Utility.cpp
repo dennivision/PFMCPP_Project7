@@ -33,7 +33,7 @@ std::vector<std::unique_ptr<Item>> makeDefensiveItems(int num)
     return items;
 }
 
-std::string getCharacterStats(const Character* ch)
+std::string getCharacterStats(Character* ch)
 {
     std::string str;
     

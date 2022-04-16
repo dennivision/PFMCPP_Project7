@@ -2,7 +2,7 @@
 
 #include "Item.h"
 
-struct HelpfulItem : public Item
+struct HelpfulItem : Item
 {
     HelpfulItem() : Item("helpful item", 2) {}
     void use(Character* character) override;
