@@ -10,10 +10,10 @@ Dwarf::Dwarf(std::string str, int hp, int arm) : Character(hp, arm, 4), name(str
 
 const std::string& Dwarf::getName()
 {
-	return name;
+    return name;
 }
 
 std::string Dwarf::getStats()
 {
-	return getCharacterStats(this);
+    return getCharacterStats(this);
 }

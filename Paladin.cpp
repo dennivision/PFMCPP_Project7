@@ -10,10 +10,10 @@ Paladin::Paladin(std::string str, int hp, int arm) : Character(hp, arm, 10), nam
 
 const std::string& Paladin::getName()
 {
-	return name;
+    return name;
 }
 
 std::string Paladin::getStats()
 {
-	return getCharacterStats(this);
+    return getCharacterStats(this);
 }
